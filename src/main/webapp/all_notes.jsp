@@ -33,12 +33,18 @@
 				for (Note note : notes) {
 				%>
 				<div class="card mt-3">
-					<img class="card-img-top m-4" src="img/note.png"
+					<img class="card-img-top m-4 mx-auto" src="img/note.png"
 						style="max-width: 100px;" alt="Card image cap">
-					<div class="card-body">
+					<div class="card-body px-5">
 						<h5 class="card-title"><%=note.getTitle()%></h5>
 						<p class="card-text"><%=note.getContent()%></p>
-						<a href="#" class="btn btn-danger">Delete</a>
+						<p><b class="text-primary"><%= note.getAddedDate().toLocaleString()  %></b></p>
+						<div class="container text-center mt-2">
+							<a href="DeleteServlet?note_id=<%=note.getId()%>"
+								class="btn btn-danger">Delete</a> <a
+								href="edit_note.jsp?note_id=<%=note.getId()%>"
+								class="btn btn-primary">Update</a>
+						</div>
 					</div>
 				</div>
 

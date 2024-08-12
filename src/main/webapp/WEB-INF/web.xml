@@ -1,21 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee 
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
 
-  <display-name>Archetype Created Web Application</display-name>
+    <display-name>Personal Note Storing Web App</display-name>
 
-  <servlet>
-    <description></description>
-    <display-name>SaveNoteServlet</display-name>
-    <servlet-name>SaveNoteServlet</servlet-name>
-    <servlet-class>com.servlets.SaveNoteServlet</servlet-class>
-  </servlet>
+    <servlet>
+        <description>Servlet for saving notes</description>
+        <display-name>SaveNoteServlet</display-name>
+        <servlet-name>SaveNoteServlet</servlet-name>
+        <servlet-class>com.servlets.SaveNoteServlet</servlet-class>
+    </servlet>
 
-  <servlet-mapping>
-    <servlet-name>SaveNoteServlet</servlet-name>
-    <url-pattern>/SaveNoteServlet</url-pattern>
-  </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SaveNoteServlet</servlet-name>
+        <url-pattern>/SaveNoteServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>Servlet for deleting notes</description>
+        <display-name>DeleteServlet</display-name>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>com.servlets.DeleteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/DeleteServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description>Servlet for updating notes</description>
+        <display-name>UpdateServlet</display-name>
+        <servlet-name>UpdateServlet</servlet-name>
+        <servlet-class>com.servlets.UpdateServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateServlet</servlet-name>
+        <url-pattern>/UpdateServlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>
